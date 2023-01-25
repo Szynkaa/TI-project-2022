@@ -49,7 +49,7 @@ class Node {
         }
     }
 
-    moveBy(dx, dy, frameCount = 40) {
+    moveBy(dx, dy, frameCount = 20) {
         const { x, y } = this.endPosition();
         this.moveTo(x + dx, y + dy, frameCount);
     }
