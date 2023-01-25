@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <title>Wizualizacja sortowań</title>
+  <link rel="StyleSheet" href="/main.css" type="text/css">
+  <script src="/script.js"></script>
+</head>
+
+<body>
+  <header>
+    Logowanie
+  </header>
+
+  <nav>
+    Nawigacja <br>
+    <a href="/">Wizualizacje</a>
+    <a href="/login">Logowanie</a>
+    <a href="/register">Rejestracja</a>
+    <a onclick="logout_()" style="text-decoration-line: underline;">Wyloguj</a>
+  </nav>
+
+  <section>
+    <form name="login">
+      <table>
+        <tr>
+          <td><label>Login</label></td>
+          <td><input type="text" id="login" name="login"></td>
+        </tr>
+        <tr>
+          <td><label>Hasło</label></td>
+          <td><input type="password" id="password" name="password"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: right;">
+            <input type="button" value="Zaloguj" onclick="login_(this.form)">
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div id="response"></div>
+  </section>
+</body>
+
+</html>

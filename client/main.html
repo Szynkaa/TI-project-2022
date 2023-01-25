@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <title>Wizualizacja sortowań</title>
+  <link rel="StyleSheet" href="/main.css" type="text/css">
+  <script src="/script.js"></script>
+</head>
+
+<body onload="finishLoading()">
+  <header>
+    Wizualizacja sortowania
+  </header>
+
+  <nav>
+    Nawigacja <br>
+    <a href="/">Wizualizacje</a>
+    <a href="/login">Logowanie</a>
+    <a href="/register">Rejestracja</a>
+    <a onclick="logout_()" style="text-decoration-line: underline;">Wyloguj</a>
+  </nav>
+
+  <section id="forCanvas">
+    <header>Sortowanie ...</header>
+    <canvas id="canvas" width="500" height="140"></canvas>
+  </section>
+
+  <div class="controls">
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <label class="beforeSelect">Rodzaj sortowania</label>
+    <select id="sortType" onchange="sortOrNChange();">
+      <option value="bubble" id="bubble">bąbelkowe</option>
+      <option value="quick" id="quick">szybkie</option>
+    </select>
+    <label>
+      n
+      <input type="number" id="n" min="2" max="12" value="5" style="margin-left:2px" onchange="sortOrNChange()">
+    </label>
+    <!-- <label>
+      Pokaż kod
+      <input type="checkbox" id="showCode">
+    </label> -->
+  </div>
+
+  <div class="controls" id="saving">
+    <button onclick="save_()">Zapisz</button>
+    <button onclick="load_()">Załaduj</button>
+    <button onclick="clear_()" title="Usuwa wszystkie zapisane ustawienia">Wyczyść</button>
+    <select id="loadedSaves" onchange="updateSortFromLoaded()">
+    </select>
+  </div>
+
+  <script src="/node.js"></script>
+  <script src="/animation.js"></script>
+  <script src="/saving.js"></script>
+</body>
+
+</html>
