@@ -33,9 +33,6 @@ function finishLoading() {
 function sortOrNChange() {
     const sortSelect = document.getElementById("sortType");
     const header = document.getElementById("forCanvas").firstElementChild;
-    console.log(sortSelect.selectedIndex);
-    console.log(sortSelect.options);
-    console.log(sortSelect.options[0]);
     header.innerHTML = "Sortowanie " + sortSelect.options[sortSelect.selectedIndex].innerText;
     const n = document.getElementById("n").value;
     worker.postMessage({ sortName: sortSelect.value, n: n });

@@ -79,7 +79,6 @@ function partition(array, left, right, moves) {
             moves.push({ i: i, j: pivotIndex, swapped: false })
             i++;
         }
-        console.log("1: arr[" + i + "] = " + array[i] + " < " + pivot);
         if (i != pivotIndex) moves.push({ i: i, j: pivotIndex, swapped: false })
 
         while (array[j] > pivot) {

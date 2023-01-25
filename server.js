@@ -2,10 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const mongodb = require('mongodb')
 const crypto = require('crypto');
-const { copyFileSync } = require('fs');
-const { remove } = require('lodash');
 const dbname = '0antkowiak';
-const url = 'mongodb://0antkowiak:pass0antkowiak@172.20.44.25/0antkowiak';
+const url = 'mongodb://localhost:27017/?readPreference=primary&ssl=false&directConnection=true';
 
 var db;
 mongodb.MongoClient.connect(url, function (err, client) {
